@@ -5,7 +5,7 @@ node default {
   #  java_se => 'jdk',
   #}
   class { 'oracle_java':
-  version => '8u45',
+  version => '8u73',
   type    => 'jdk'
 }
 }
