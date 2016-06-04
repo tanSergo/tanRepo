@@ -9,7 +9,7 @@ node default {
     type    => 'jdk'
   }
   file { '/home/ec2-user/.profile':
-    ensure => present,
+    ensure => file,
     owner => ec2-user,
     group => ec2-user,
     mode => 0644,
