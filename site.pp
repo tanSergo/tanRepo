@@ -5,11 +5,14 @@ node default {
   #  java_se => 'jdk',
   #}
   class { 'oracle_java':
-    version => '8u73',
+    version => '8u45',
     type    => 'jdk'
   }
   file { '/home/ec2-user/.profile':
     ensure => present,
+    owner => ec2-user,
+    group => ec2-user,
+    mode => 0644,
     source => '/etc/puppet/modules/tanRepo/.profile',
   } 
 }

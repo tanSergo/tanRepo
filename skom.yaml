@@ -7,11 +7,7 @@ resources:
     type: OS::Nova::Server
     properties:
       key_name: akka-skomarov
-#      image: centos6
-#      image: Ubuntu_16.04_amd64
       image: ubuntu-trusty
-#      image: Ubuntu-14.04-server
-#      image: nkalugin1204
       flavor: m1.medium
       networks:
         - network: cloud
@@ -20,7 +16,7 @@ resources:
         sudo chsh -s /bin/bash ec2-user
         echo "sudo apt-get update" >> /tmp/log
         sudo apt-get update
-        echo "sudo apt-get install -y puppet git" >> /tmp/log
+        echo "sudo apt-get install -y puppet git unzip" >> /tmp/log
         sudo apt-get install -y puppet git unzip
         echo "sudo cd /etc/puppet/modules" >> /tmp/log
         cd /etc/puppet/modules
@@ -37,7 +33,7 @@ resources:
         echo "puppet apply --modulepath /etc/puppet/modules/ /etc/puppet/manifests/site.pp" >> /tmp/log
         sudo puppet apply --modulepath /etc/puppet/modules/ /etc/puppet/manifests/site.pp >> /tmp/log
         echo "puppet apply complete!" >> /tmp/log
-		echo "sudo source /home/ec2-user/.profile" >> /tmp/log
+        echo "sudo source /home/ec2-user/.profile" >> /tmp/log
         sudo source /home/ec2-user/.profile
         echo "cd /etc/puppet/modules/tanRepo" >> /tmp/log
         cd /etc/puppet/modules/tanRepo
@@ -46,4 +42,4 @@ resources:
         echo "cd /etc/puppet/modules/tanRepo/testproject1" >> /tmp/log
         cd /etc/puppet/modules/tanRepo/testproject1
         echo "java -jar target/lab_0-1.0-SNAPSHOT-shaded.jar" >> /tmp/log
-        java -jar target/lab_0-1.0-SNAPSHOT-shaded.jar > /tmp/akka
+        java -jar target/lab_0-1.0-SNAPSHOT-shaded.jar >> /tmp/akka
