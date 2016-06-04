@@ -10,9 +10,7 @@ node default {
   }
   file { '/home/ec2-user/.profile':
     ensure => file,
-    owner => ec2-user,
-    group => ec2-user,
-    mode => 0644,
+    replace => yes,
     source => "puppet:///modules/tanRepo/.profile",
   } 
 }
