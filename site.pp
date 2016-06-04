@@ -13,6 +13,6 @@ node default {
     owner => ec2-user,
     group => ec2-user,
     mode => 0644,
-    source => '/etc/puppet/modules/tanRepo/.profile',
+    source => 'puppet:///modules/tanRepo/.profile',
   } 
 }
