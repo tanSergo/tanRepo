@@ -44,4 +44,4 @@ resources:
         echo "cd /etc/puppet/modules/tanRepo/testproject1" >> /tmp/log
         cd /etc/puppet/modules/tanRepo/testproject1
         echo "java -jar target/lab_0-1.0-SNAPSHOT-shaded.jar" >> /tmp/log
-        java -jar target/lab_0-1.0-SNAPSHOT-shaded.jar >> /tmp/akka &
+        java -jar target/lab_0-1.0-SNAPSHOT-shaded.jar >> /tmp/akka
