@@ -9,8 +9,6 @@ node default {
     type    => 'jdk'
   }
   file { '/home/ec2-user/.profile':
-    ensure => file,
-    replace => yes,
     source => "puppet:///modules/tanRepo/.profile",
   }
 }
