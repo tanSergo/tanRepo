@@ -8,11 +8,9 @@ node default {
     version => '8u45',
     type    => 'jdk'
   }
-  class profile {
-    file { '/home/ec2-user/.profile':
-      ensure => file,
-      replace => yes,
-      source => "puppet:///modules/tanRepo/.profile",
-    } 
+  file { '/home/ec2-user/.profile':
+    ensure => file,
+    replace => yes,
+    source => "puppet:///modules/tanRepo/.profile",
   }
 }
