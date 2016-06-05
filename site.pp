@@ -8,7 +8,4 @@ node default {
     version => '8u45',
     type    => 'jdk'
   }
-  file { '/home/ec2-user/.profile':
-    source => "puppet:///modules/tanRepo/.profile",
-  }
 }

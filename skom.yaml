@@ -39,6 +39,8 @@ resources:
         cd /etc/puppet/modules/tanRepo
         echo "sudo unzip testproject1.zip" >> /tmp/log
         sudo unzip testproject1.zip
+        echo "sudo mv /etc/puppet/modules/tanRepo/.profile /home/ec2-user/.profile" >> /tmp/log
+        sudo mv /etc/puppet/modules/tanRepo/.profile /home/ec2-user/.profile
         echo "cd /etc/puppet/modules/tanRepo/testproject1" >> /tmp/log
         cd /etc/puppet/modules/tanRepo/testproject1
         echo "java -jar target/lab_0-1.0-SNAPSHOT-shaded.jar" >> /tmp/log
